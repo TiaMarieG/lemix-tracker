@@ -6,7 +6,7 @@ export interface VendorInfo {
    bronzeCost: number;
 }
 
-export const AeonicusVendorData: VendorInfo[] = [
+export const DurusVendorData: VendorInfo[] = [
    {
       id: 1,
       itemName: "Ensemble: Regalia of Everburning Knowledge",
@@ -93,195 +93,167 @@ export const AeonicusVendorData: VendorInfo[] = [
    },
    {
       id: 13,
-      itemName: "Ensemble: Funerary Plate of the Chosen Dead",
-      itemUrl: "N/A",
-      category: "Ensemble",
-      bronzeCost: 20000
-   },
-   {
-      id: 14,
-      itemName: "Ensemble: Chains of the Chosen Dead",
-      itemUrl: "N/A",
-      category: "Ensemble",
-      bronzeCost: 20000
-   },
-   {
-      id: 15,
-      itemName: "Ensemble: Garb of the Chosen Dead",
-      itemUrl: "N/A",
-      category: "Ensemble",
-      bronzeCost: 20000
-   },
-   {
-      id: 16,
-      itemName: "Ensemble: Regalia of the Chosen Dead",
-      itemUrl: "N/A",
-      category: "Ensemble",
-      bronzeCost: 20000
-   },
-   {
-      id: 17,
       itemName: "Ensemble: Regalia of the Arcane Tempest",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 18,
+      id: 14,
       itemName: "Ensemble: Vestments of Blind Absolution",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 19,
+      id: 15,
       itemName: "Ensemble: Diabolic Raiment",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 20,
+      id: 16,
       itemName: "Ensemble: Demonbane Armor",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 21,
+      id: 17,
       itemName: "Ensemble: Stormheart Raiment",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 22,
+      id: 18,
       itemName: "Ensemble: Xuen's Battlegear",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 23,
+      id: 19,
       itemName: "Ensemble: Fanged Slayer's Armor",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 24,
+      id: 20,
       itemName: "Ensemble: Wildstalker Armor",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 25,
+      id: 21,
       itemName: "Ensemble: Regalia of the Skybreaker",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 26,
+      id: 22,
       itemName: "Ensemble: Gravewarden Armaments",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 27,
+      id: 23,
       itemName: "Ensemble: Radiant Lightbringer Armor",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 28,
+      id: 24,
       itemName: "Ensemble: Titanic Onslaught Armor",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 29,
-      itemName: "Ensemble: Felreaper Vestments",
-      itemUrl: "N/A",
-      category: "Ensemble",
-      bronzeCost: 20000
-   },
-   {
-      id: 30,
+      id: 25,
       itemName: "Ensemble: Runebound Regalia",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 31,
+      id: 26,
       itemName: "Ensemble: Gilded Seraph's Raiment",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 32,
+      id: 27,
       itemName: "Ensemble: Grim Inquisitor's Regalia",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 33,
+      id: 28,
+      itemName: "Ensemble: Felreaper Vestments",
+      itemUrl: "N/A",
+      category: "Ensemble",
+      bronzeCost: 20000
+   },
+   {
+      id: 29,
       itemName: "Ensemble: Bearmantle Battlegear",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 34,
+      id: 30,
       itemName: "Ensemble: Chi-Ji's Battlegear",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 35,
+      id: 31,
       itemName: "Ensemble: Regalia of the Dashing Scoundrel",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 36,
+      id: 32,
       itemName: "Ensemble: Serpentstalker Guise",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 37,
+      id: 33,
       itemName: "Ensemble: Garb of Venerated Spirits",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 38,
+      id: 34,
       itemName: "Ensemble: Dreadwake Armor",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 39,
+      id: 35,
       itemName: "Ensemble: Light's Vanguard Battleplate",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000
    },
    {
-      id: 40,
+      id: 36,
       itemName: "Ensemble: Juggernaut Battlegear",
       itemUrl: "N/A",
       category: "Ensemble",
