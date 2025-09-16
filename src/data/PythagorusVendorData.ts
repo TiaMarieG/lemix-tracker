@@ -14,7 +14,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       category: "Rare Collectible",
       cost: {
          horn: 20,
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -24,7 +24,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       category: "Rare Collectible",
       cost: {
          ore: 20,
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -34,7 +34,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       category: "Rare Collectible",
       cost: {
          gem: 20,
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -44,7 +44,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       category: "Rare Collectible",
       cost: {
          fire: 20,
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -53,7 +53,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -62,7 +62,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -71,7 +71,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -80,7 +80,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -89,7 +89,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -98,7 +98,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -107,7 +107,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -116,7 +116,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -125,7 +125,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -134,7 +134,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -143,7 +143,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -152,7 +152,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -161,7 +161,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -170,7 +170,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -179,7 +179,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -188,7 +188,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -197,7 +197,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -206,7 +206,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -215,7 +215,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -224,7 +224,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -233,7 +233,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -242,7 +242,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -251,7 +251,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -260,7 +260,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -269,7 +269,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -278,7 +278,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -287,7 +287,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -296,7 +296,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -305,7 +305,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -314,7 +314,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -323,7 +323,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -332,7 +332,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -341,7 +341,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -350,7 +350,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -359,7 +359,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
    {
@@ -368,7 +368,7 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Ensemble",
       cost: {
-         bronze: 30000,
+         bronzeCost: 30000,
       }
    },
 ];
