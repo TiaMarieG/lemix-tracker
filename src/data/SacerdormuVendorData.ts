@@ -72,7 +72,7 @@ export const SacerdormuVendorData: VendorInfo[] = [
    },
    {
       id: 10,
-      itemName: "Ensemble: Regalia of Shackled Elements (Ice)",
+      itemName: "Ensemble: Regalia of Shackled Elements (Felfire)",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 20000

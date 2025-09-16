@@ -13,8 +13,8 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Rare Collectible",
       cost: {
-         Horn: 20,
-         Bronze: 30000,
+         horn: 20,
+         bronze: 30000,
       }
    },
    {
@@ -23,8 +23,8 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Rare Collectible",
       cost: {
-         Ore: 20,
-         Bronze: 30000,
+         ore: 20,
+         bronze: 30000,
       }
    },
    {
@@ -33,8 +33,8 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Rare Collectible",
       cost: {
-         Gem: 20,
-         Bronze: 30000,
+         gem: 20,
+         bronze: 30000,
       }
    },
    {
@@ -43,8 +43,8 @@ export const PythagorusVendorData: VendorInfo[] = [
       itemUrl: "N/A",
       category: "Rare Collectible",
       cost: {
-         Fire: 20,
-         Bronze: 30000,
+         fire: 20,
+         bronze: 30000,
       }
    },
    {

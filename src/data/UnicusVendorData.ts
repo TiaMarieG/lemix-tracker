@@ -184,7 +184,7 @@ export const UnicusVendorData: VendorInfo[] = [
    },
    {
       id: 26,
-      itemName: "Ensemble: Heritage of the Lightforged - Holy Gold",
+      itemName: "Ensemble: Heritage of the Lightforged - Hologemmed",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 7500
@@ -250,48 +250,48 @@ export const UnicusVendorData: VendorInfo[] = [
       itemName: "Ensemble: Mantles of the Nightwell",
       itemUrl: "N/A",
       category: "Ensemble",
-      bronzeCost: 7500
+      bronzeCost: 2500
    },
    {
       id: 36,
       itemName: "Ensemble: Tideskorn Hunter's Munitions",
       itemUrl: "N/A",
       category: "Ensemble",
-      bronzeCost: 7500
+      bronzeCost: 2500
    },
    {
       id: 37,
       itemName: "Arsenal: Mo'arg Swords",
       itemUrl: "N/A",
       category: "Arsenal",
-      bronzeCost: 7500
+      bronzeCost: 2500
    },
    {
       id: 38,
       itemName: "Arsenal: Bone Scythes",
       itemUrl: "N/A",
       category: "Arsenal",
-      bronzeCost: 7500
+      bronzeCost: 2500
    },
    {
       id: 39,
       itemName: "Arsenal: Immortal Maces",
       itemUrl: "N/A",
       category: "Arsenal",
-      bronzeCost: 7500
+      bronzeCost: 2500
    },
    {
       id: 40,
       itemName: "Arsenal: Mo'arg Hornmaces",
       itemUrl: "N/A",
       category: "Arsenal",
-      bronzeCost: 7500
+      bronzeCost: 2500
    },
    {
       id: 41,
       itemName: "Arsenal: Gems of the Lightforged Draenei",
       itemUrl: "N/A",
       category: "Arsenal",
-      bronzeCost: 7500
+      bronzeCost: 2500
    }
 ]
