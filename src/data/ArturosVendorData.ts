@@ -99,28 +99,28 @@ export const ArturosVendorData: VendorInfo[] = [
       bronzeCost: 15000
    },
    {
-      id: 2,
+      id: 14,
       itemName: "Ensemble: Nighthide Coat",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 15000
    },
    {
-      id: 14,
+      id: 15,
       itemName: "Ensemble: Raiment of Night Eternal",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 15000
    },
    {
-      id: 15,
+      id: 16,
       itemName: "Ensemble: Guise of the Nightstalker",
       itemUrl: "N/A",
       category: "Ensemble",
       bronzeCost: 15000
    },
    {
-      id: 16,
+      id: 17,
       itemName: "Ensemble: Scalemail of Devouring Night",
       itemUrl: "N/A",
       category: "Ensemble",

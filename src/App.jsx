@@ -1,12 +1,25 @@
-import HomePage from './HomePage'
+import React from 'react';
+import Header from './components/Header';
+import VendorInfo from './components/VendorInfo';
+import { vendors } from './data/Vendors';
 
-function App() {
-  
+const App = () => {
   return (
-    <>
-      <HomePage />
-    </>
-  )
-}
+    <div>
+      <Header />
+      
+      {vendors.map(vendor => (
+        <React.Fragment key={vendor.name}>
+          <VendorInfo
+            vendorName={vendor.name}
+            vendorCategory={vendor.category}
+            vendorData={vendor.data.filter(item => item != null)}
+          />
+          <hr />
+        </React.Fragment>
+      ))}
+    </div>
+  );
+};
 
-export default App
+export default App;
