@@ -1,11 +1,12 @@
-// Header.jsx
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { vendors } from "../data/Vendors";
 import bronzeCoin from "../assets/bronze.png";
 import horn from "../assets/horn.png";
 import gem from "../assets/gem.png";
 import fire from "../assets/fire.png";
 import ore from "../assets/ore.png";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 const Header = () => {
    const [totalCosts, setTotalCosts] = useState({});
@@ -48,17 +49,21 @@ const Header = () => {
 
    return (
       <header>
-         <h2>Total:</h2>
-         {Object.entries(totalCosts).map(([currency, amount]) => (
-            <p key={currency}>
-               {amount.toLocaleString()}
-               <img
-                  src={currencyIcons[currency]}
-                  alt={`${currency} icon`}
-                  className="currency-icon"
-               />
-            </p>
-         ))}
+         <Box sx={{ display: "flex", alignItems: "center" }}>
+            <h2>Total:</h2>
+            {Object.entries(totalCosts).map(([currency, amount]) => (
+               <Box key={currency} sx={{ display: "flex", alignItems: "center", ml: 2 }}>
+                  <Typography sx={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+                     {amount.toLocaleString()}
+                  </Typography>
+                  <img
+                     src={currencyIcons[currency]}
+                     alt={`${currency} icon`}
+                     className="currency-icon"
+                  />
+               </Box>
+            ))}
+         </Box>
       </header>
    );
 };
