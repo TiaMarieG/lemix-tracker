@@ -1,7 +1,11 @@
 // Header.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { vendors } from "../data/Vendors";
-import bronzeCoin from "../assets/bronze.jpg";
+import bronzeCoin from "../assets/bronze.png";
+import horn from "../assets/horn.png";
+import gem from "../assets/gem.png";
+import fire from "../assets/fire.png";
+import ore from "../assets/ore.png";
 
 const Header = () => {
    const [totalCosts, setTotalCosts] = useState({});
@@ -34,20 +38,25 @@ const Header = () => {
       setTotalCosts(newTotalCosts);
    }, []);
 
+   const currencyIcons = {
+      bronzeCost: bronzeCoin,
+      horn: horn,
+      gem: gem,
+      fire: fire,
+      ore: ore,
+   };
+
    return (
       <header>
          <h2>Total:</h2>
          {Object.entries(totalCosts).map(([currency, amount]) => (
             <p key={currency}>
-               
-               {currency === "bronzeCost" ? (
-                  <span>{amount.toLocaleString()} </span>
-               ) : (
-                  <span>{currency}: {amount.toLocaleString()}</span>
-               )}
-               {currency === "bronzeCost" && (
-                  <img src={bronzeCoin} alt="Bronze Coin" className="currency-icon" />
-               )}
+               {amount.toLocaleString()}
+               <img
+                  src={currencyIcons[currency]}
+                  alt={`${currency} icon`}
+                  className="currency-icon"
+               />
             </p>
          ))}
       </header>
