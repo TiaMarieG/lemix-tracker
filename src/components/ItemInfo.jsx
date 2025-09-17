@@ -1,6 +1,19 @@
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
+
 import bronzeCoin from "../assets/bronze.png";
+import horn from "../assets/horn.png";
+import gem from "../assets/gem.png";
+import ore from "../assets/ore.png";
+import fire from "../assets/fire.png";
+
+const currencyIcons = {
+   bronzeCost: bronzeCoin,
+   horn: horn,
+   gem: gem,
+   ore: ore,
+   fire: fire,
+};
 
 const ItemInfo = ({ item }) => {
    return (
@@ -16,22 +29,27 @@ const ItemInfo = ({ item }) => {
          <Box className="item-costs" sx={{ display: "flex", alignItems: "center" }}>
             {"cost" in item && typeof item.cost === "object" ? (
                Object.entries(item.cost).map(([currency, amount]) => (
-                  <Box key={currency} sx={{ display: "flex", alignItems: "center" }}>
-                     {currency === "bronzeCost" ? (
+                  <Box key={currency} sx={{ display: "flex", alignItems: "center", mr: 1 }}>
+                     {currencyIcons[currency] ? (
                         <>
-                           <span>{amount.toLocaleString()}</span>
-                           <img src={bronzeCoin} alt="Bronze Coin" className="currency-icon" />
+                           <span>{amount.toLocaleString()}</span>{" "}
+                           <img
+                              src={currencyIcons[currency]}
+                              alt={`${currency} icon`}
+                              className="currency-icon"
+                           />
                         </>
                      ) : (
+                        // Fallback for currencies without a mapped icon
                         <p>
-                           {currency}: {amount.toLocaleString()}
+                           {currency}: {amount.toLocaleString()}{" "}
                         </p>
                      )}
                   </Box>
                ))
             ) : (
                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <span>{item.bronzeCost.toLocaleString()}</span>
+                  <span>{item.bronzeCost.toLocaleString()}</span>{" "}
                   <img src={bronzeCoin} alt="Bronze Coin" className="currency-icon" />
                </Box>
             )}
