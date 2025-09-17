@@ -1,6 +1,6 @@
+// src/components/ItemInfo.jsx
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
-
 import bronzeCoin from "../assets/bronze.png";
 import horn from "../assets/horn.png";
 import gem from "../assets/gem.png";
@@ -15,24 +15,39 @@ const currencyIcons = {
    fire: fire,
 };
 
-const ItemInfo = ({ item }) => {
+const ItemInfo = ({ item, collectedItems, onItemToggle }) => {
+   const uniqueKey = `${item.vendorName}-${item.id}`;
+   const isCollected = collectedItems[uniqueKey] || false;
+
+   const handleCheckboxChange = () => {
+      onItemToggle(item.vendorName, item.id);
+   };
+
    return (
-      <Box 
-         className="item-card" 
-         sx={{ 
-            display: "flex", 
-            justifyContent: "space-between", 
-            alignItems: "center" 
+      <Box
+         className="item-card"
+         sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
          }}
       >
          <h5>{item.itemName}</h5>
-         <Box className="item-costs" sx={{ display: "flex", alignItems: "center" }}>
+         <Box
+            className="item-costs"
+            sx={{ display: "flex", alignItems: "center" }}
+         >
             {"cost" in item && typeof item.cost === "object" ? (
                Object.entries(item.cost).map(([currency, amount]) => (
-                  <Box key={currency} sx={{ display: "flex", alignItems: "center", mr: 1 }}>
+                  <Box
+                     key={currency}
+                     sx={{ display: "flex", alignItems: "center", mr: 1 }}
+                  >
                      {currencyIcons[currency] ? (
                         <>
-                           <span>{amount.toLocaleString()}</span>{" "}
+                           <span style={{ marginRight: "5px" }}>
+                              {amount.toLocaleString()}
+                           </span>
                            <img
                               src={currencyIcons[currency]}
                               alt={`${currency} icon`}
@@ -40,20 +55,29 @@ const ItemInfo = ({ item }) => {
                            />
                         </>
                      ) : (
-                        // Fallback for currencies without a mapped icon
                         <p>
-                           {currency}: {amount.toLocaleString()}{" "}
+                           {currency}: {amount.toLocaleString()}
                         </p>
                      )}
                   </Box>
                ))
             ) : (
                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <span>{item.bronzeCost.toLocaleString()}</span>{" "}
-                  <img src={bronzeCoin} alt="Bronze Coin" className="currency-icon" />
+                  <span style={{ marginRight: "5px" }}>
+                     {item.bronzeCost.toLocaleString()}
+                  </span>
+                  <img
+                     src={currencyIcons.bronzeCost}
+                     alt="Bronze Coin"
+                     className="currency-icon"
+                  />
                </Box>
             )}
-            <Checkbox sx={{ ml: "auto", pr: 0 }} />
+            <Checkbox
+               sx={{ ml: "auto" }}
+               checked={isCollected}
+               onChange={handleCheckboxChange}
+            />
          </Box>
       </Box>
    );

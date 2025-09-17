@@ -1,4 +1,4 @@
-// VendorPage.jsx
+// src/components/VendorInfo.jsx
 import ItemInfo from "./ItemInfo";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -7,7 +7,13 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Box from "@mui/material/Box";
 
-const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
+const VendorInfo = ({
+   vendorName,
+   vendorCategory,
+   vendorData,
+   collectedItems,
+   onItemToggle,
+}) => {
    return (
       <Accordion>
          <AccordionSummary
@@ -32,7 +38,12 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
          <AccordionDetails>
             <div className="item-list">
                {vendorData.map((item) => (
-                  <ItemInfo key={item.id} item={item} />
+                  <ItemInfo
+                     key={item.id}
+                     item={{ ...item, vendorName: vendorName }}
+                     collectedItems={collectedItems}
+                     onItemToggle={onItemToggle}
+                  />
                ))}
             </div>
          </AccordionDetails>
