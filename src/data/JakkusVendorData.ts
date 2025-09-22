@@ -2,7 +2,6 @@ export interface VendorInfo {
    id: number;
    itemName: string;
    itemUrl: string;
-   category: "Mount";
    bronzeCost: number;
 }
 
@@ -10,85 +9,73 @@ export const JakkusVendorData: VendorInfo[] = [
    {
       id: 1,
       itemName: "Reins of the Highlord's Felscorned Charger",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253028/reins-of-the-highlords-felscorned-charger",
       bronzeCost: 20000
    },
    {
       id: 2,
       itemName: "Iron Reigns of the Felscorned War Wrym",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253033/iron-reins-of-the-felscorned-war-wrym",
       bronzeCost: 20000
    },
    {
       id: 3,
       itemName: "Felscorned Reins of the Vilebrood Vanquisher",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=252954/felscorned-reins-of-the-vilebrood-vanquisher",
       bronzeCost: 20000
    },
    {
       id: 4,
       itemName: "Reigns of the Felscorned Wolfhawk",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253025/reins-of-the-felscorned-wolfhawk",
       bronzeCost: 20000
    },
    {
       id: 5,
       itemName: "Felscorned Tempest Totem",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253031/felscorned-tempest-totem",
       bronzeCost: 20000
    },
    {
       id: 6,
       itemName: "Shadowblade's Reins of the Felscorned Portent",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253030/shadowblades-reins-of-felscorned-portent",
       bronzeCost: 20000
    },
    {
       id: 7,
       itemName: "Felscorned Grandmaster's Bell",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253027/felscorned-grandmasters-bell",
       bronzeCost: 20000
    },
    {
       id: 8,
       itemName: "Feldruid's Scornwing Idol",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253024/feldruids-scornwing-idol",
       bronzeCost: 20000
    },
    {
       id: 9,
       itemName: "Slayer's Reins of the Felscorned Shrieker",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253013/slayers-reins-of-the-felscorned-shrieker",
       bronzeCost: 20000
    },
    {
       id: 10,
       itemName: "Felscorned Seeker's Whistle",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253029/felscorned-seekers-whistle",
       bronzeCost: 20000
    },
    {
       id: 11,
       itemName: "Felscorned Reins of the Netherlord's Dreadsteed",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253032/felscorned-reins-of-the-netherlords-dreadsteed",
       bronzeCost: 20000
    },
    {
       id: 12,
       itemName: "Archmage's Felscorned Disc",
-      itemUrl: "N/A",
-      category: "Mount",
+      itemUrl: "https://www.wowhead.com/ptr/item=253026/archmages-felscorned-disc",
       bronzeCost: 20000
    }
 ]

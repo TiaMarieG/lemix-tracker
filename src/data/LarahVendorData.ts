@@ -2,7 +2,6 @@ export interface VendorInfo {
    id: number;
    itemName: string;
    itemUrl: string;
-   category: "Ensemble";
    bronzeCost: number;
 }
 
@@ -10,337 +9,289 @@ export const LarahVendorData: VendorInfo[] = [
    {
       id: 1,
       itemName: "Ensemble: Fel-Infused Cloth Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=139170/ensemble-fel-infused-cloth-armor",
       bronzeCost: 15000
    },
    {
       id: 2,
       itemName: "Ensemble: Felshroud Leather Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=139169/ensemble-felshroud-leather-armor",
       bronzeCost: 15000
    },
    {
       id: 3,
       itemName: "Ensemble: Fel-Chain Mail Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=139168/ensemble-fel-chain-mail-armor",
       bronzeCost: 15000
    },
    {
       id: 4,
       itemName: "Ensemble: Felforged Plate Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=139167/ensemble-felforged-plate-armor",
       bronzeCost: 15000
    },
    {
       id: 5,
       itemName: "Ensemble: Vestments of the Manasinged",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241440/ensemble-vestments-of-the-manasinged",
       bronzeCost: 15000
    },
    {
       id: 6,
       itemName: "Ensemble: Moonfall Robes",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241438/ensemble-moonfall-robes",
       bronzeCost: 15000
    },
    {
       id: 7,
       itemName: "Ensemble: Battlegear of the Dreadhide Stalker",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241437/ensemble-battlegear-of-the-dreadhide-stalker",
       bronzeCost: 15000
    },
    {
       id: 8,
       itemName: "Ensemble: Ambervale Bonehide",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241435/ensemble-ambervale-bonehide",
       bronzeCost: 15000
    },
    {
       id: 9,
       itemName: "Ensemble: Chains of Helheim",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241433/ensemble-chains-of-helheim",
       bronzeCost: 15000
    },
    {
       id: 10,
       itemName: "Ensemble: Darkwatcher Bindings",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241432/ensemble-darkwatcher-bindings",
       bronzeCost: 15000
    },
    {
       id: 11,
       itemName: "Ensemble: Jandvik Diver's Metal",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241430/ensemble-jandvik-divers-metal",
       bronzeCost: 15000
    },
    {
       id: 12,
       itemName: "Ensemble: Leyline Defender's Sunplate Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241429/ensemble-leyline-defenders-sunplate-armor",
       bronzeCost: 15000
    },
    {
       id: 13,
       itemName: "Ensemble: Regalia of the Hrydshal Runespeaker",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241384/ensemble-regalia-of-the-hrydshal-runespeaker",
       bronzeCost: 15000
    },
    {
       id: 14,
       itemName: "Ensemble: Crescent Vale Raiment",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241383/ensemble-crescent-vale-raiment",
       bronzeCost: 15000
    },
    {
       id: 15,
       itemName: "Ensemble: Wine-dark Royal Robes",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241382/ensemble-wine-dark-royal-robes",
       bronzeCost: 15000
    },
    {
       id: 16,
       itemName: "nsemble: Leyline Scholar's Regalia",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241381/ensemble-leyline-scholars-regalia",
       bronzeCost: 15000
    },
    {
       id: 17,
       itemName: "Ensemble: Highmountain Hides",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241380/ensemble-highmountain-hides",
       bronzeCost: 15000
    },
    {
       id: 18,
       itemName: "Ensemble: Haustvelt Leathers",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241379/ensemble-haustvelt-leathers",
       bronzeCost: 15000
    },
    {
       id: 19,
       itemName: "Ensemble: Sablehide Vestments",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241378/ensemble-sablehide-vestments",
       bronzeCost: 15000
    },
    {
       id: 20,
       itemName: "Ensemble: Llothien Prowler's Kit",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241377/ensemble-llothien-prowlers-kit",
       bronzeCost: 15000
    },
    {
       id: 21,
       itemName: "Ensemble: Scavenged Chains of Karazhan",
       itemUrl: "N/A",
-      category: "Ensemble",
       bronzeCost: 15000
    },
    {
       id: 22,
       itemName: "Ensemble: Dreadthorn Battlegear",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241376/ensemble-dreadthorn-battlegear",
       bronzeCost: 15000
    },
    {
       id: 23,
       itemName: "Ensemble: Scales of Remembered Eternity",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241375/ensemble-scales-of-remembered-eternity",
       bronzeCost: 15000
    },
    {
       id: 24,
       itemName: "Ensemble: Stormborn Laminar Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241374/ensemble-stormborn-laminar-armor",
       bronzeCost: 15000
    },
    {
       id: 25,
       itemName: "Ensemble: Highmountain Riverscales",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241373/ensemble-highmountain-riverscales",
       bronzeCost: 15000
    },
    {
       id: 26,
       itemName: "Ensemble: Thunderpeak Boneguards",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241372/ensemble-thunderpeak-boneguards",
       bronzeCost: 15000
    },
    {
       id: 27,
       itemName: "Ensemble: Nar'thalas Graduate's Trim",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241371/ensemble-narthalas-graduates-trim",
       bronzeCost: 15000
    },
    {
       id: 28,
       itemName: "Ensemble: Kal'delar Battleplate",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241370/ensemble-kaldelar-battleplate",
       bronzeCost: 15000
    },
    {
       id: 29,
       itemName: "Ensemble: Vrykul Funereal Regalia",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241369/ensemble-vrykul-funereal-regalia",
       bronzeCost: 15000
    },
    {
       id: 30,
       itemName: "Ensemble: Riven Priesthood Regalia",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241364/ensemble-riven-priesthood-regalia",
       bronzeCost: 15000
    },
    {
       id: 31,
       itemName: "Ensemble: Lunarblight Leathers",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241363/ensemble-lunarblight-leathers",
       bronzeCost: 15000
    },
    {
       id: 32,
       itemName: "Ensemble: Shrinebreaker's Battlegear",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241362/ensemble-shrinebreakers-battlegear",
       bronzeCost: 15000
    },
    {
       id: 33,
       itemName: "Ensemble: Moonshatter Warplate",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241361/ensemble-moonshatter-warplate",
       bronzeCost: 15000
    },
    {
       id: 34,
       itemName: "Ensemble: Vileweave Vestments",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241444/ensemble-vileweave-vestments",
       bronzeCost: 15000
    },
    {
       id: 35,
       itemName: "Ensemble: Netherfiend Battlegear",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241443/ensemble-netherfiend-battlegear",
       bronzeCost: 15000
    },
    {
       id: 36,
       itemName: "Ensemble: Ered'ruin Scalemail",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241442/ensemble-eredruin-scalemail",
       bronzeCost: 15000
    },
    {
       id: 37,
       itemName: "Ensemble: Xorothian Plate Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241441/ensemble-xorothian-plate-armor",
       bronzeCost: 15000
    },
    {
       id: 38,
       itemName: "Ensemble: Garothi Battleplate",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241359/ensemble-garothi-battleplate",
       bronzeCost: 15000
    },
    {
       id: 39,
       itemName: "Ensemble: Doomsinger's Cloth Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241368/ensemble-doomsingers-cloth-armor",
       bronzeCost: 15000
    },
    {
       id: 40,
       itemName: "Ensemble: Arinor Keeper's Leather Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241367/ensemble-arinor-keepers-leather-armor",
       bronzeCost: 15000
    },
    {
       id: 41,
       itemName: "Ensemble: Oronaar Disciple's Mail Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241366/ensemble-oronaar-disciples-mail-armor",
       bronzeCost: 15000
    },
    {
       id: 42,
       itemName: "Ensemble: Praetorium Guard's Plate Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241365/ensemble-praetorium-guards-plate-armor",
       bronzeCost: 15000
    },
    {
       id: 43,
       itemName: "Ensemble: Stygian Hides",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=241391/ensemble-stygian-hides",
       bronzeCost: 15000
    },
    {
       id: 44,
       itemName: "Ensemble: Zealous Felslingers Battle Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=253594/ensemble-zealous-felslingers-battle-armor",
       bronzeCost: 15000
    },
    {
       id: 45,
       itemName: "Ensemble: World-Defiler's Battle Armor",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=253588/ensemble-world-defilers-battle-armor",
       bronzeCost: 15000
    },
    {
       id: 46,
       itemName: "Ensemble: Forgotten Conservatory Clothes",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=254753/ensemble-forgotten-conservatory-clothes",
       bronzeCost: 15000
    },
    {
       id: 47,
       itemName: "Ensemble: Eredath Lightseeker's Regalia",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=254754/ensemble-eredath-lightseekers-regalia",
       bronzeCost: 15000
    },
    {
       id: 48,
       itemName: "Ensemble: Triumvirate High Guard's Battlegear",
-      itemUrl: "N/A",
-      category: "Ensemble",
+      itemUrl: "https://www.wowhead.com/ptr/item=254752/ensemble-triumvirate-high-guards-battlegear",
       bronzeCost: 15000
    }
 ]
