@@ -65,6 +65,7 @@ const TotalCostTracker = ({ allVendorData, collectedItems }) => {
                backgroundColor: "#1e1e1e",
                borderRadius: "8px",
                boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
+               mb: 2
             }}
          >
             <Typography variant="h4" gutterBottom>
