@@ -1,5 +1,5 @@
 // src/components/TotalCostTracker.jsx
-import React, { useState, useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
@@ -9,7 +9,7 @@ import gem from "../assets/gem.png";
 import fire from "../assets/fire.png";
 import ore from "../assets/ore.png";
 
-// Move currency icons outside the component to avoid re-creation on every render
+
 const currencyIcons = {
    bronzeCost: bronzeCoin,
    horn: horn,
@@ -19,7 +19,7 @@ const currencyIcons = {
 };
 
 const TotalCostTracker = ({ allVendorData, collectedItems }) => {
-   // Use useMemo to cache the calculated values and only re-run when dependencies change
+
    const { remainingCosts, progress } = useMemo(() => {
       let remaining = {};
       let completedCount = 0;
