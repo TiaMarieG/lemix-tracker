@@ -1,24 +1,13 @@
 // src/components/TotalCostTracker.jsx
 import { useMemo } from "react";
+import { useCollection } from "../hooks/useCollection.js";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
-import bronzeCoin from "../assets/bronze.png";
-import horn from "../assets/horn.png";
-import gem from "../assets/gem.png";
-import fire from "../assets/fire.png";
-import ore from "../assets/ore.png";
+import { currencyIcons } from "../data/currencies";
 
-
-const currencyIcons = {
-   bronzeCost: bronzeCoin,
-   horn: horn,
-   gem: gem,
-   fire: fire,
-   ore: ore,
-};
-
-const TotalCostTracker = ({ allVendorData, collectedItems }) => {
+const TotalCostTracker = () => {
+   const { allVendorData, collectedItems } = useCollection();
 
    const { remainingCosts, progress } = useMemo(() => {
       let remaining = {};
@@ -38,10 +27,7 @@ const TotalCostTracker = ({ allVendorData, collectedItems }) => {
                   : { bronzeCost: item.bronzeCost };
 
             for (const currency in itemCosts) {
-               if (
-                  Object.prototype.hasOwnProperty.call(itemCosts, currency) &&
-                  itemCosts[currency] !== undefined
-               ) {
+               if (Object.prototype.hasOwnProperty.call(itemCosts, currency)) {
                   const amount = itemCosts[currency];
                   remaining[currency] = (remaining[currency] || 0) + amount;
                }
@@ -55,86 +41,52 @@ const TotalCostTracker = ({ allVendorData, collectedItems }) => {
    }, [allVendorData, collectedItems]);
 
    return (
-      <header>
+      <Box
+         sx={{
+            backgroundColor: "#1e1e1e",
+            padding: "20px",
+            borderRadius: "8px",
+            mb: 2,
+         }}
+      >
+         <Typography variant="h4" gutterBottom>
+            Remaining Costs:
+         </Typography>
          <Box
-            sx={{
-               display: "flex",
-               flexDirection: "column",
-               alignItems: "center",
-               padding: "20px",
-               backgroundColor: "#1e1e1e",
-               borderRadius: "8px",
-               boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.5)",
-               mb: 2
-            }}
+            sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
          >
-            <Typography variant="h4" gutterBottom>
-               Remaining Costs:
-            </Typography>
-            <Box
-               sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  flexWrap: "wrap",
-               }}
-            >
-               {Object.entries(remainingCosts).map(([currency, amount]) => (
-                  <Box
-                     key={currency}
-                     sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        ml: 2,
-                        mb: 1,
-                     }}
-                  >
-                     <Typography
-                        variant="h5"
-                        sx={{ fontWeight: "bold", color: "#fff" }}
-                     >
-                        {amount.toLocaleString()}
-                     </Typography>
-                     <img
-                        src={currencyIcons[currency]}
-                        alt={`${currency} icon`}
-                        className="currency-icon"
-                        style={{
-                           width: "24px",
-                           height: "24px",
-                        }}
-                     />
-                  </Box>
-               ))}
-            </Box>
-            <Box sx={{ width: "50%" }}>
+            {Object.entries(remainingCosts).map(([currency, amount]) => (
                <Box
-                  sx={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center",
-                     mb: 1,
-                  }}
+                  key={currency}
+                  className="flex-center"
+                  sx={{ ml: 2, mb: 1 }}
                >
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                     Progress: {`${Math.round(progress)}%`}
+                  <Typography variant="h5">
+                     {amount.toLocaleString()}
                   </Typography>
+                  <img
+                     src={currencyIcons[currency]}
+                     alt={`${currency} icon`}
+                     className="currency-icon"
+                  />
                </Box>
-               <LinearProgress
-                  variant="determinate"
-                  value={progress}
-                  sx={{
-                     height: "20px",
-                     mx: "auto",
-                     alignItems: "center",
-                     borderRadius: "5px",
-                     "& .MuiLinearProgress-bar": {
-                        backgroundColor: "#00c800ff",
-                     },
-                  }}
-               />
-            </Box>
+            ))}
          </Box>
-      </header>
+         <Box sx={{ width: "50%", mx: "auto", mt: 2 }}>
+            <Typography variant="h6" align="center">
+               Progress: {`${Math.round(progress)}%`}
+            </Typography>
+            <LinearProgress
+               variant="determinate"
+               value={progress}
+               sx={{
+                  height: "20px",
+                  borderRadius: "5px",
+                  "& .MuiLinearProgress-bar": { backgroundColor: "#00c800ff" },
+               }}
+            />
+         </Box>
+      </Box>
    );
 };
 
