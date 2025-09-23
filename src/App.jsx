@@ -64,7 +64,7 @@ const App = () => {
           justifyContent: 'space-between'
         }}>
           {vendors.map(vendor => (
-            <Box key={vendor.name} sx={{ width: '49%', mt: 2 }}>
+            <Box key={vendor.name} sx={{ width: '49%', mb: 2 }}>
               <VendorInfo
                 vendorName={vendor.name}
                 vendorCategory={vendor.category}

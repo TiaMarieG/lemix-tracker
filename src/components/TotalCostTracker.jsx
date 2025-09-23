@@ -74,7 +74,7 @@ const TotalCostTracker = ({ allVendorData, collectedItems }) => {
                </Box>
             ))}
          </Box>
-         <Box sx={{ width: "100%", mt: 2 }}>
+         <Box sx={{ width: "50%", mb: 2, alignContent: "center", mx: "auto" }}>
             <LinearProgress variant="determinate" value={progress} />
          </Box>
       </header>
