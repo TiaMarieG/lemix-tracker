@@ -1,5 +1,6 @@
 // src/App.jsx
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
 import TotalCostTracker from './components/TotalCostTracker';
 import VendorInfo from './components/VendorInfo';
 import { vendors } from './data/Vendors';
