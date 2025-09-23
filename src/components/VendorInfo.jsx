@@ -14,6 +14,12 @@ const VendorInfo = ({
    collectedItems,
    onItemToggle,
 }) => {
+   const totalItems = vendorData.length;
+   const collectedCount = vendorData.filter((item) => {
+      const uniqueKey = `${vendorName}-${item.id}`;
+      return !!collectedItems[uniqueKey];
+   }).length;
+
    return (
       <Accordion>
          <AccordionSummary
@@ -27,11 +33,16 @@ const VendorInfo = ({
                   flexDirection: "column",
                   alignItems: "center",
                   width: "100%",
+                  
                }}
             >
                <Typography variant="h6">{vendorName}</Typography>
                <Typography variant="subtitle1" sx={{ color: "text.secondary" }}>
                   {vendorCategory}
+               </Typography>
+
+               <Typography variant="body2" sx={{ color: "#00c800ff", mt: 0.5 }}>
+                  {collectedCount}/{totalItems} Collected
                </Typography>
             </Box>
          </AccordionSummary>
