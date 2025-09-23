@@ -1,8 +1,8 @@
 // src/App.jsx
 import { useState, useEffect } from 'react';
-import Header from './components/Header';
 import TotalCostTracker from './components/TotalCostTracker';
 import VendorInfo from './components/VendorInfo';
+import Header from './components/Header';
 import { vendors } from './data/Vendors';
 import Box from '@mui/material/Box';
 
@@ -45,36 +45,46 @@ const App = () => {
         height: '100vh',
         width: '100vw',
         display: 'flex',
-        justifyContent: 'center'
+        flexDirection: 'column'
       }}
     >
+      <Header />
       <Box
         sx={{
-          maxWidth: 1000,
-          p: 2,
+          flexGrow: 1,
+          display: 'flex',
+          justifyContent: 'center'
         }}
       >
-        <TotalCostTracker 
-          allVendorData={allVendorData} 
-          collectedItems={collectedItems} 
-        />
-        
-        <Box sx={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between'
-        }}>
-          {vendors.map(vendor => (
-            <Box key={vendor.name} sx={{ width: '49%', mb: 2 }}>
-              <VendorInfo
-                vendorName={vendor.name}
-                vendorCategory={vendor.category}
-                vendorData={vendor.data.filter(item => item != null)}
-                collectedItems={collectedItems}
-                onItemToggle={handleItemToggle}
-              />
-            </Box>
-          ))}
+        <Box
+          sx={{
+            maxWidth: 1000,
+            width: '100%',
+            p: 2,
+          }}
+        >
+          <TotalCostTracker 
+            allVendorData={allVendorData} 
+            collectedItems={collectedItems} 
+          />
+          
+          <Box sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between'
+          }}>
+            {vendors.map(vendor => (
+              <Box key={vendor.name} sx={{ width: '49%', mb: 2 }}>
+                <VendorInfo
+                  vendorName={vendor.name}
+                  vendorCategory={vendor.category}
+                  vendorData={vendor.data.filter(item => item != null)}
+                  collectedItems={collectedItems}
+                  onItemToggle={handleItemToggle}
+                />
+              </Box>
+            ))}
+          </Box>
         </Box>
       </Box>
     </Box>
