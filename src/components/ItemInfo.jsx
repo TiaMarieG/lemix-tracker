@@ -1,6 +1,7 @@
 // src/components/ItemInfo.jsx
 import Box from "@mui/material/Box";
 import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
 import bronzeCoin from "../assets/bronze.png";
 import horn from "../assets/horn.png";
 import gem from "../assets/gem.png";
@@ -32,7 +33,16 @@ const ItemInfo = ({ item, collectedItems, onItemToggle }) => {
             alignItems: "center",
          }}
       >
-         <h5>{item.itemName}</h5>
+         <h5>
+            <Link
+               href={item.itemUrl}
+               target="_blank"
+               rel="noopener noreferrer"
+               sx={{ color: "inherit" }}
+            >
+               {item.itemName}
+            </Link>
+         </h5>
          <Box
             className="item-costs"
             sx={{ display: "flex", alignItems: "center" }}
