@@ -30,8 +30,9 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
             sx={{
                position: "sticky",
                top: 0,
-               zIndex: 1,
+               zIndex: 10,
                backgroundColor: "background.paper",
+               backgroundImage: "none"
             }}
          >
             <Box
