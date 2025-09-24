@@ -2,7 +2,7 @@
 
 ## What is it?
 
-With the upcoming World of Warcraft: Legion Remix patch, I wanted to create a tracking tool that can be used to, well, track all of the new items that are being added for players to collect during the event. As with every new patch, addons can take forever to be updated/created for use during the event and I've never been a fan of spreadsheets, so I figured "Why not use the skills that I've learned during my BAS?". With the help of WoWHead's datamining articles and guildmates who tested Lemix during the PTR, I created a simplistic React-Vite web application that allows users to easily track purchaseable items.
+With the upcoming World of Warcraft: Legion Remix patch, I wanted to create a tracking tool that can be used to, well, track all of the purchasable new items that are being added for players to collect during the event. As with every new patch, addons can take forever to be updated/created for use during the event and I've never been a fan of spreadsheets, so I figured "Why not use the skills that I've learned during my BAS?". With the help of WoWHead's datamining articles and guildmates who tested Lemix during the PTR, I created a simplistic React-Vite web application that allows users to easily track purchaseable items.
 
 ## What can it do?
 

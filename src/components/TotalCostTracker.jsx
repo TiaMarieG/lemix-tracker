@@ -157,7 +157,6 @@ const TotalCostTracker = () => {
                value={progress}
                sx={{
                   height: "20px",
-                  backgroundColor: "#81B6DF",
                   borderRadius: "5px",
                   "& .MuiLinearProgress-bar": { backgroundColor: "#00c800ff" },
                }}
