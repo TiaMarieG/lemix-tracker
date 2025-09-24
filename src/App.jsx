@@ -3,6 +3,7 @@ import VendorInfo from "./components/VendorInfo";
 import Header from "./components/Header";
 import { useCollection } from "../src/hooks/useCollection";
 import Box from "@mui/material/Box";
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
    const { vendors } = useCollection();
@@ -17,6 +18,7 @@ const App = () => {
          }}
       >
          <Header />
+         <Analytics />
          <Box
             sx={{
                flexGrow: 1,
