@@ -33,7 +33,7 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
                <Typography variant="subtitle1" sx={{ color: "text.secondary" }}>
                   {vendorCategory}
                </Typography>
-               <Typography variant="body2" sx={{ color: "#00c800ff", mt: 1 }}>
+               <Typography variant="body2" sx={{ color: "#00c800ff", mt: 0.5 }}>
                   {collectedCount}/{totalItems} Collected
                </Typography>
             </Box>
