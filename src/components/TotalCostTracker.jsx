@@ -63,6 +63,7 @@ const TotalCostTracker = () => {
             backgroundColor: "#1e1e1e",
             padding: "20px",
             borderRadius: "8px",
+            boxShadow: 4,
             mb: 2,
          }}
       >
