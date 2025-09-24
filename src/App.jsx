@@ -35,7 +35,13 @@ const App = () => {
                   }}
                >
                   {vendors.map((vendor) => (
-                     <Box key={vendor.name} sx={{ width: "49%", mb: 2 }}>
+                     <Box
+                        key={vendor.name}
+                        sx={{
+                           width: { xs: "100%", md: "49%" }, // 100% on mobile, 49% on medium screens and up
+                           mb: 2,
+                        }}
+                     >
                         <VendorInfo
                            vendorName={vendor.name}
                            vendorCategory={vendor.category}
