@@ -60,11 +60,11 @@ const TotalCostTracker = () => {
    return (
       <Box
          sx={{
-            backgroundColor: "#1e1e1e",
+            backgroundColor: "background.paper",
             padding: "20px",
             borderRadius: "8px",
             boxShadow: 4,
-            mb: 2,
+            mb: 2
          }}
       >
          <Typography variant="h4" gutterBottom align="center">
@@ -133,7 +133,7 @@ const TotalCostTracker = () => {
                   <Box
                      key={currency}
                      className="flex-center"
-                     sx={{ ml: 2, mb: 1 }}
+                     sx={{ ml: 2}}
                   >
                      <Typography variant="h5">
                         {amount.toLocaleString()}
@@ -148,8 +148,8 @@ const TotalCostTracker = () => {
             </Box>
          )}
 
-         <Box sx={{ width: { xs: "90%", sm: "50%" }, mx: "auto", mt: 2 }}>
-            <Typography variant="h6" align="center">
+         <Box sx={{ width: { xs: "90%", sm: "50%" }, mx: "auto", mt: 1 }}>
+            <Typography variant="h6" align="center" gutterBottom>
                Progress: {`${Math.round(progress)}%`}
             </Typography>
             <LinearProgress
@@ -157,6 +157,7 @@ const TotalCostTracker = () => {
                value={progress}
                sx={{
                   height: "20px",
+                  backgroundColor: "#81B6DF",
                   borderRadius: "5px",
                   "& .MuiLinearProgress-bar": { backgroundColor: "#00c800ff" },
                }}

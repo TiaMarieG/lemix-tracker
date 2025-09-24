@@ -1,5 +1,5 @@
 // src/components/VendorInfo.jsx
-import React from "react";
+import React, { useState } from "react";
 import { useCollection } from "../hooks/useCollection.js";
 import ItemInfo from "./ItemInfo";
 import Accordion from "@mui/material/Accordion";
@@ -11,6 +11,11 @@ import Box from "@mui/material/Box";
 
 const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
    const { collectedItems } = useCollection();
+   const [expanded, setExpanded] = useState(false);
+
+   const handleExpansionChange = (event, isExpanded) => {
+      setExpanded(isExpanded);
+   };
 
    const totalItems = vendorData.length;
    const collectedCount = vendorData.filter((item) => {
@@ -19,17 +24,27 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
    }).length;
 
    return (
-      <Accordion>
-         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+      <Accordion expanded={expanded} onChange={handleExpansionChange}>
+         <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            sx={{
+               position: "sticky",
+               top: 0,
+               zIndex: 1,
+               backgroundColor: "background.paper",
+            }}
+         >
             <Box
                sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "100%"
+                  width: "100%",
                }}
             >
-               <Typography variant="h6">{vendorName}</Typography>
+               <Typography variant="h5">
+                  {vendorName}
+               </Typography>
                <Typography variant="subtitle1" sx={{ color: "text.secondary" }}>
                   {vendorCategory}
                </Typography>
