@@ -26,7 +26,7 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "100%",
+                  width: "100%"
                }}
             >
                <Typography variant="h6">{vendorName}</Typography>

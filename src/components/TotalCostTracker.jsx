@@ -9,7 +9,6 @@ import { currencyIcons } from "../data/currencies";
 const TotalCostTracker = () => {
    const { allVendorData, collectedItems } = useCollection();
 
-   // The logic to separate costs is moved inside useMemo
    const { bronzeCost, otherCostRows, progress } = useMemo(() => {
       let remaining = {};
       let completedCount = 0;
@@ -58,7 +57,7 @@ const TotalCostTracker = () => {
             backgroundColor: "#1e1e1e",
             padding: "20px",
             borderRadius: "8px",
-            mb: 2,
+            mb: 2
          }}
       >
          <Typography variant="h4" gutterBottom align="center">
@@ -85,7 +84,7 @@ const TotalCostTracker = () => {
             sx={{
                display: "flex",
                flexDirection: "column",
-               alignItems: "center",
+               alignItems: "center"
             }}
          >
             {otherCostRows.map((row, index) => (

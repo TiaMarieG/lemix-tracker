@@ -20,7 +20,6 @@ const App = () => {
          <Box
             sx={{
                flexGrow: 1,
-               overflowY: "auto",
                display: "flex",
                justifyContent: "center",
             }}
@@ -38,7 +37,7 @@ const App = () => {
                      <Box
                         key={vendor.name}
                         sx={{
-                           width: { xs: "100%", md: "49%" }, // 100% on mobile, 49% on medium screens and up
+                           width: { xs: "100%", md: "49%" },
                            mb: 2,
                         }}
                      >

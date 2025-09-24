@@ -22,7 +22,7 @@ const ItemInfo = ({ item }) => {
          sx={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center",
+            alignItems: "center"
          }}
       >
          <h5>
