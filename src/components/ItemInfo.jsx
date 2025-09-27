@@ -22,7 +22,7 @@ const ItemInfo = ({ item }) => {
          sx={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "center"
+            alignItems: "center",
          }}
       >
          <h5>
@@ -38,10 +38,8 @@ const ItemInfo = ({ item }) => {
          <Box className="item-costs flex-center">
             {"cost" in item && typeof item.cost === "object" ? (
                Object.entries(item.cost).map(([currency, amount]) => (
-                  <Box key={currency} className="flex-center" sx={{ mr: 1 }}>
-                     <span style={{ marginRight: "5px" }}>
-                        {amount.toLocaleString()}
-                     </span>
+                  <Box key={currency} className="flex-center">
+                     <span>{amount.toLocaleString()}</span>
                      <img
                         src={currencyIcons[currency]}
                         alt={`${currency} icon`}
@@ -51,9 +49,7 @@ const ItemInfo = ({ item }) => {
                ))
             ) : (
                <Box className="flex-center">
-                  <span style={{ marginRight: "5px" }}>
-                     {item.bronzeCost.toLocaleString()}
-                  </span>
+                  <span>{item.bronzeCost.toLocaleString()}</span>
                   <img
                      src={currencyIcons.bronzeCost}
                      alt="Bronze Coin"

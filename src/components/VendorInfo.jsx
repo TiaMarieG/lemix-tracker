@@ -1,5 +1,5 @@
 // src/components/VendorInfo.jsx
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react"; // 1. Import useMemo
 import { useCollection } from "../hooks/useCollection.js";
 import ItemInfo from "./ItemInfo";
 import Accordion from "@mui/material/Accordion";
@@ -9,13 +9,30 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Box from "@mui/material/Box";
 
-const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
+// 2. Add the 'hideCollected' prop here
+const VendorInfo = ({
+   vendorName,
+   vendorCategory,
+   vendorData,
+   hideCollected,
+}) => {
    const { collectedItems } = useCollection();
    const [expanded, setExpanded] = useState(false);
 
    const handleExpansionChange = (event, isExpanded) => {
       setExpanded(isExpanded);
    };
+
+   // 3. Filter the list before rendering, but only if the toggle is on
+   const filteredItems = useMemo(() => {
+      if (!hideCollected) {
+         return vendorData;
+      }
+      return vendorData.filter((item) => {
+         const uniqueKey = `${vendorName}-${item.id}`;
+         return !collectedItems[uniqueKey];
+      });
+   }, [vendorData, collectedItems, hideCollected, vendorName]);
 
    const totalItems = vendorData.length;
    const collectedCount = vendorData.filter((item) => {
@@ -32,7 +49,6 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
                top: 0,
                zIndex: 10,
                backgroundColor: "background.paper",
-               backgroundImage: "none"
             }}
          >
             <Box
@@ -43,9 +59,7 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
                   width: "100%",
                }}
             >
-               <Typography variant="h5">
-                  {vendorName}
-               </Typography>
+               <Typography variant="h5">{vendorName}</Typography>
                <Typography variant="subtitle1" sx={{ color: "text.secondary" }}>
                   {vendorCategory}
                </Typography>
@@ -54,9 +68,9 @@ const VendorInfo = ({ vendorName, vendorCategory, vendorData }) => {
                </Typography>
             </Box>
          </AccordionSummary>
-         <AccordionDetails>
+         <AccordionDetails sx={{ pr: 0.5 }}>
             <div className="item-list">
-               {vendorData.map((item) => (
+               {filteredItems.map((item) => (
                   <ItemInfo
                      key={item.id}
                      item={{ ...item, vendorName: vendorName }}

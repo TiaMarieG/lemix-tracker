@@ -1,12 +1,26 @@
+// src/App.jsx
+
+import { useState, useMemo } from "react";
 import TotalCostTracker from "./components/TotalCostTracker";
 import VendorInfo from "./components/VendorInfo";
 import Header from "./components/Header";
+import ToggleOptions from "./components/ToggleOptions";
 import { useCollection } from "../src/hooks/useCollection";
 import Box from "@mui/material/Box";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
    const { vendors } = useCollection();
+   const [isToggled, setIsToggled] = useState(false);
+   const [hideCollected, setHideCollected] = useState(false);
+
+   const sortedVendors = useMemo(() => {
+      const sortableVendors = [...vendors];
+      if (isToggled) {
+         sortableVendors.sort((a, b) => a.name.localeCompare(b.name));
+      }
+      return sortableVendors;
+   }, [vendors, isToggled]);
 
    return (
       <Box
@@ -27,6 +41,22 @@ const App = () => {
          >
             <Box sx={{ maxWidth: 1000, width: "100%", p: 2 }}>
                <TotalCostTracker />
+
+               <Box
+                  sx={{
+                     width: { xs: "100%", md: "49%" },
+                     mb: 2,
+                     mx: "auto"
+                  }}
+               >
+                  <ToggleOptions
+                     isToggled={isToggled}
+                     onToggle={() => setIsToggled((prev) => !prev)}
+                     hideCollected={hideCollected}
+                     onHideToggle={() => setHideCollected((prev) => !prev)}
+                  />
+               </Box>
+
                <Box
                   sx={{
                      display: "flex",
@@ -34,7 +64,7 @@ const App = () => {
                      justifyContent: "space-between",
                   }}
                >
-                  {vendors.map((vendor) => (
+                  {sortedVendors.map((vendor) => (
                      <Box
                         key={vendor.name}
                         sx={{
@@ -48,6 +78,7 @@ const App = () => {
                            vendorData={vendor.data.filter(
                               (item) => item != null
                            )}
+                           hideCollected={hideCollected}
                         />
                      </Box>
                   ))}

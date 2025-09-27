@@ -16,6 +16,15 @@ const darkTheme = createTheme({
       paper: '#1e1e1e'
     },
   },
+  components: {
+    MuiAccordion: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          boxShadow: theme.shadows[4]
+        }),
+      },
+    },
+  },
 });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
