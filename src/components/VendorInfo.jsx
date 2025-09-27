@@ -1,5 +1,6 @@
 // src/components/VendorInfo.jsx
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { useCollection } from "../hooks/useCollection.js";
 import { currencyIcons } from "../data/currencies";
 import ItemInfo from "./ItemInfo";
@@ -9,6 +10,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Box from "@mui/material/Box";
+import ReactConfetti from "react-confetti";
 
 const VendorInfo = ({
    vendorName,
@@ -19,6 +21,8 @@ const VendorInfo = ({
 }) => {
    const { collectedItems } = useCollection();
    const [expanded, setExpanded] = useState(false);
+   const [showConfetti, setShowConfetti] = useState(false);
+   const [confettiYPosition, setConfettiYPosition] = useState(0);
 
    const handleExpansionChange = (event, isExpanded) => {
       setExpanded(isExpanded);
@@ -27,7 +31,6 @@ const VendorInfo = ({
    const { totalBronze, remainingBronze } = useMemo(() => {
       let total = 0;
       let remaining = 0;
-
       const getBronzeCost = (item) => {
          if (
             item.cost &&
@@ -38,17 +41,14 @@ const VendorInfo = ({
          }
          return typeof item.bronzeCost === "number" ? item.bronzeCost : 0;
       };
-
       vendorData.forEach((item) => {
          const cost = getBronzeCost(item);
          total += cost;
-
          const uniqueKey = `${vendorName}-${item.id}`;
          if (!collectedItems[uniqueKey]) {
             remaining += cost;
          }
       });
-
       return { totalBronze: total, remainingBronze: remaining };
    }, [vendorData, collectedItems, vendorName]);
 
@@ -68,62 +68,123 @@ const VendorInfo = ({
       return !!collectedItems[uniqueKey];
    }).length;
 
+   const prevCollectedCount = useRef(collectedCount);
+
+   useEffect(() => {
+      if (
+         totalItems > 0 &&
+         prevCollectedCount.current < totalItems &&
+         collectedCount === totalItems
+      ) {
+         setConfettiYPosition(window.scrollY);
+         setShowConfetti(true);
+         const timer = setTimeout(() => setShowConfetti(false), 8000);
+         return () => clearTimeout(timer);
+      }
+      prevCollectedCount.current = collectedCount;
+   }, [collectedCount, totalItems]);
+
    return (
-      <Accordion expanded={expanded} onChange={handleExpansionChange}>
-         <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            sx={{
-               position: "sticky",
-               top: 0,
-               zIndex: 10,
-               backgroundColor: "background.paper",
-            }}
-         >
-            <Box
+      <>
+         {showConfetti &&
+            createPortal(
+               <ReactConfetti
+                  recycle={false}
+                  numberOfPieces={800}
+                  style={{
+                     position: "absolute",
+                     top: confettiYPosition,
+                     left: 0,
+                     width: "100%",
+                     zIndex: 9999,
+                  }}
+               />,
+               document.body
+            )}
+
+         <Accordion expanded={expanded} onChange={handleExpansionChange}>
+            <AccordionSummary
+               expandIcon={<ExpandMoreIcon />}
                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  width: "100%",
+                  position: "sticky",
+                  top: 0,
+                  zIndex: 10,
+                  backgroundColor: "background.paper",
                }}
             >
-               <Typography variant="h5">{vendorName}</Typography>
-               <Typography variant="subtitle1" sx={{ color: "text.secondary" }}>
-                  {vendorCategory}
-               </Typography>
+               <Box
+                  sx={{
+                     display: "flex",
+                     flexDirection: "column",
+                     alignItems: "center",
+                     width: "100%",
+                  }}
+               >
+                  <Typography variant="h5">{vendorName}</Typography>
+                  <Typography
+                     variant="subtitle1"
+                     sx={{ color: "text.secondary" }}
+                  >
+                     {vendorCategory}
+                  </Typography>
 
-               <Typography variant="body2" sx={{ color: "#00c800ff", mt: 0.5 }}>
-                  {collectedCount}/{totalItems} Collected
-               </Typography>
-               {showBronzeCost && totalBronze > 0 && (
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
-                     <Typography variant="body2" sx={{ color: "#00c800ff" }}>
-                        {`${remainingBronze.toLocaleString()} / ${totalBronze.toLocaleString()}`}
+                  {totalItems > 0 && collectedCount === totalItems ? (
+                     <Typography
+                        variant="body2"
+                        sx={{ color: "#00c800ff", mt: 0.5, fontWeight: "bold" }}
+                     >
+                        All Items purchased!
                      </Typography>
-                     <img
-                        src={currencyIcons.bronzeCost}
-                        alt="Bronze Coin"
-                        className="currency-icon"
-                        style={{ margin: 4, width: 16, height: 16 }}
+                  ) : (
+                     <>
+                        <Typography
+                           variant="body2"
+                           sx={{ color: "#00c800ff", mt: 0.5 }}
+                        >
+                           {collectedCount}/{totalItems} Collected
+                        </Typography>
+                        {showBronzeCost && totalBronze > 0 && (
+                           <Box
+                              sx={{
+                                 display: "flex",
+                                 alignItems: "center",
+                                 mt: 0.25,
+                              }}
+                           >
+                              <Typography
+                                 variant="body2"
+                                 sx={{ color: "#00c800ff" }}
+                              >
+                                 {`${remainingBronze.toLocaleString()} Remaining / ${totalBronze.toLocaleString()} Total`}
+                              </Typography>
+                              <img
+                                 src={currencyIcons.bronzeCost}
+                                 alt="Bronze Coin"
+                                 className="currency-icon"
+                                 style={{
+                                    marginLeft: "4px",
+                                    width: 14,
+                                    height: 14,
+                                 }}
+                              />
+                           </Box>
+                        )}
+                     </>
+                  )}
+               </Box>
+            </AccordionSummary>
+            <AccordionDetails sx={{ pr: 0.5 }}>
+               <div className="item-list">
+                  {filteredItems.map((item) => (
+                     <ItemInfo
+                        key={item.id}
+                        item={{ ...item, vendorName: vendorName }}
                      />
-                     <Typography variant="body2" sx={{ color: "#00c800ff" }}>
-                        Remaining
-                     </Typography>
-                  </Box>
-               )}
-            </Box>
-         </AccordionSummary>
-         <AccordionDetails sx={{ pr: 0.5 }}>
-            <div className="item-list">
-               {filteredItems.map((item) => (
-                  <ItemInfo
-                     key={item.id}
-                     item={{ ...item, vendorName: vendorName }}
-                  />
-               ))}
-            </div>
-         </AccordionDetails>
-      </Accordion>
+                  ))}
+               </div>
+            </AccordionDetails>
+         </Accordion>
+      </>
    );
 };
 
