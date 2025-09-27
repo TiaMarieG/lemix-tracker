@@ -155,7 +155,7 @@ const VendorInfo = ({
                                  variant="body2"
                                  sx={{ color: "#00c800ff" }}
                               >
-                                 {`${remainingBronze.toLocaleString()} Remaining / ${totalBronze.toLocaleString()} Total`}
+                                 {`${remainingBronze.toLocaleString()} / ${totalBronze.toLocaleString()}`}
                               </Typography>
                               <img
                                  src={currencyIcons.bronzeCost}
@@ -167,6 +167,12 @@ const VendorInfo = ({
                                     height: 14,
                                  }}
                               />
+                              <Typography
+                                 variant="body2"
+                                 sx={{ color: "#00c800ff", ml: 0.75 }}
+                              >
+                                 Remaining
+                              </Typography>
                            </Box>
                         )}
                      </>
