@@ -37,16 +37,18 @@ const ItemInfo = ({ item }) => {
          </h5>
          <Box className="item-costs flex-center">
             {"cost" in item && typeof item.cost === "object" ? (
-               Object.entries(item.cost).map(([currency, amount]) => (
-                  <Box key={currency} className="flex-center">
-                     <span>{amount.toLocaleString()}</span>
-                     <img
-                        src={currencyIcons[currency]}
-                        alt={`${currency} icon`}
-                        className="currency-icon"
-                     />
-                  </Box>
-               ))
+               <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+                  {Object.entries(item.cost).map(([currency, amount]) => (
+                     <Box key={currency} className="flex-center">
+                        <span>{amount.toLocaleString()}</span>
+                        <img
+                           src={currencyIcons[currency]}
+                           alt={`${currency} icon`}
+                           className="currency-icon"
+                        />
+                     </Box>
+                  ))}
+               </Box>
             ) : (
                <Box className="flex-center">
                   <span>{item.bronzeCost.toLocaleString()}</span>
@@ -57,11 +59,7 @@ const ItemInfo = ({ item }) => {
                   />
                </Box>
             )}
-            <Checkbox
-               sx={{ ml: "auto" }}
-               checked={isCollected}
-               onChange={handleCheckboxChange}
-            />
+            <Checkbox checked={isCollected} onChange={handleCheckboxChange} />
          </Box>
       </Box>
    );

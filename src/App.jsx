@@ -1,5 +1,4 @@
 // src/App.jsx
-
 import { useState, useMemo } from "react";
 import TotalCostTracker from "./components/TotalCostTracker";
 import VendorInfo from "./components/VendorInfo";
@@ -13,6 +12,7 @@ const App = () => {
    const { vendors } = useCollection();
    const [isToggled, setIsToggled] = useState(false);
    const [hideCollected, setHideCollected] = useState(false);
+   const [showBronzeCost, setShowBronzeCost] = useState(false);
 
    const sortedVendors = useMemo(() => {
       const sortableVendors = [...vendors];
@@ -46,7 +46,7 @@ const App = () => {
                   sx={{
                      width: { xs: "100%", md: "49%" },
                      mb: 2,
-                     mx: "auto"
+                     mx: "auto",
                   }}
                >
                   <ToggleOptions
@@ -54,6 +54,10 @@ const App = () => {
                      onToggle={() => setIsToggled((prev) => !prev)}
                      hideCollected={hideCollected}
                      onHideToggle={() => setHideCollected((prev) => !prev)}
+                     showBronzeCost={showBronzeCost}
+                     onShowBronzeCostToggle={() =>
+                        setShowBronzeCost((prev) => !prev)
+                     }
                   />
                </Box>
 
@@ -79,6 +83,7 @@ const App = () => {
                               (item) => item != null
                            )}
                            hideCollected={hideCollected}
+                           showBronzeCost={showBronzeCost}
                         />
                      </Box>
                   ))}

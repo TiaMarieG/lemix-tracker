@@ -12,6 +12,8 @@ const ToggleOptions = ({
    onToggle,
    hideCollected,
    onHideToggle,
+   showBronzeCost,
+   onShowBronzeCostToggle,
 }) => {
    return (
       <Accordion
@@ -23,7 +25,7 @@ const ToggleOptions = ({
       >
          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography sx={{ width: "100%", textAlign: "center" }}>
-               Toggles
+               Options
             </Typography>
          </AccordionSummary>
          <AccordionDetails>
@@ -36,6 +38,15 @@ const ToggleOptions = ({
                   <Switch checked={hideCollected} onChange={onHideToggle} />
                }
                label="Hide Collected"
+            />
+            <FormControlLabel
+               control={
+                  <Switch
+                     checked={showBronzeCost}
+                     onChange={onShowBronzeCostToggle}
+                  />
+               }
+               label="Show Vendor Remaining/Total Bronze"
             />
          </AccordionDetails>
       </Accordion>
