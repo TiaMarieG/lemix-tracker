@@ -22,7 +22,8 @@ const VendorInfo = ({
    const { collectedItems } = useCollection();
    const [expanded, setExpanded] = useState(false);
    const [showConfetti, setShowConfetti] = useState(false);
-   const [confettiYPosition, setConfettiYPosition] = useState(0);
+   const [isRecycling, setIsRecycling] = useState(true);
+   const [confettiCanvasHeight, setConfettiCanvasHeight] = useState(0);
 
    const handleExpansionChange = (event, isExpanded) => {
       setExpanded(isExpanded);
@@ -76,24 +77,47 @@ const VendorInfo = ({
          prevCollectedCount.current < totalItems &&
          collectedCount === totalItems
       ) {
-         setConfettiYPosition(window.scrollY);
+         setConfettiCanvasHeight(document.body.scrollHeight);
+         setIsRecycling(true);
          setShowConfetti(true);
-         const timer = setTimeout(() => setShowConfetti(false), 8000);
-         return () => clearTimeout(timer);
+
+         const recycleTimer = setTimeout(() => setIsRecycling(false), 6000);
+         const hideTimer = setTimeout(() => setShowConfetti(false), 10000);
+
+         return () => {
+            clearTimeout(recycleTimer);
+            clearTimeout(hideTimer);
+         };
       }
       prevCollectedCount.current = collectedCount;
    }, [collectedCount, totalItems]);
+
+   useEffect(() => {
+      if (showConfetti) {
+         const observer = new ResizeObserver(() => {
+            setConfettiCanvasHeight(document.body.scrollHeight);
+         });
+
+         observer.observe(document.body);
+
+         return () => {
+            observer.disconnect();
+         };
+      }
+   }, [showConfetti]);
+
 
    return (
       <>
          {showConfetti &&
             createPortal(
                <ReactConfetti
-                  recycle={false}
-                  numberOfPieces={800}
+                  numberOfPieces={400}
+                  recycle={isRecycling}
+                  height={confettiCanvasHeight}
                   style={{
                      position: "absolute",
-                     top: confettiYPosition,
+                     top: 0,
                      left: 0,
                      width: "100%",
                      zIndex: 9999,
