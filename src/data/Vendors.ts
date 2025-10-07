@@ -10,6 +10,7 @@ import { LarahVendorData } from "./LarahVendorData";
 import { PythagorusVendorData } from "./PythagorusVendorData";
 import { SacerdormuVendorData } from "./SacerdormuVendorData";
 import { UnicusVendorData } from "./UnicusVendorData";
+import { DomeliusVendorData } from "./DomeliusVendorData";
 
 export interface VendorConfig {
    name: string;
@@ -21,61 +22,66 @@ export const vendors: VendorConfig[] = [
    {
       name: "Jakkus",
       category: "Felscorned Order Hall Mounts",
-      data: JakkusVendorData,
+      data: JakkusVendorData
    },
    {
       name: "Hemet Nesingwary XVII",
       category: "Remix Mounts",
-      data: HemetVendorData,
+      data: HemetVendorData
    },
    {
       name: "Horos",
       category: "Rare Collections",
-      data: HorosVendorData,
+      data: HorosVendorData
    },
    {
       name: "Unicus",
       category: "Exclusive Ensembles",
-      data: UnicusVendorData,
+      data: UnicusVendorData
    },
    {
       name: "Larah",
       category: "Open World & Questing Ensembles",
-      data: LarahVendorData,
+      data: LarahVendorData
    },
    {
       name: "Arturos",
       category: "Dungeon Ensembles",
-      data: ArturosVendorData,
+      data: ArturosVendorData
    },
    {
       name: "Aeonicus",
       category: "Raid Finder Ensembles",
-      data: AeonicusVendorData,
+      data: AeonicusVendorData
    },
    {
       name: "Durus",
       category: "Normal Raid Ensembles",
-      data: DurusVendorData,
+      data: DurusVendorData
    },
    {
       name: "Sacerdormu",
       category: "Heroic Raid Ensembles",
-      data: SacerdormuVendorData,
+      data: SacerdormuVendorData
    },
    {
       name: "Pythagorus",
       category: "Mythic Raid Ensembles",
-      data: PythagorusVendorData,
+      data: PythagorusVendorData
    },
    {
       name: "Agos the Silent",
       category: "Lost & Found Apparel",
-      data: AgosVendorData,
+      data: AgosVendorData
    },
    {
       name: "Freddie Threads",
       category: "Discount Cloak Ensembles",
-      data: FreddieVendorData,
+      data: FreddieVendorData
    },
+   {
+      name: "Domelius",
+      category: "Furniture",
+      data: DomeliusVendorData
+   }
 ];
