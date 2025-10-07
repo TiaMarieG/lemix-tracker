@@ -1,14 +1,11 @@
-import { AeonicusVendorData } from "./AeonicusVendorData";
 import { AgosVendorData } from "./AgosVendorData";
 import { ArturosVendorData } from "./ArturosVendorData";
-import { DurusVendorData } from "./DurusVendorData";
 import { FreddieVendorData } from "./FreddieVendorData";
 import { HemetVendorData } from "./HemetVendorData";
 import { HorosVendorData } from "./HorosVendorData";
 import { JakkusVendorData } from "./JakkusVendorData";
 import { LarahVendorData } from "./LarahVendorData";
 import { PythagorusVendorData } from "./PythagorusVendorData";
-import { SacerdormuVendorData } from "./SacerdormuVendorData";
 import { UnicusVendorData } from "./UnicusVendorData";
 import { DomeliusVendorData } from "./DomeliusVendorData";
 
@@ -50,23 +47,8 @@ export const vendors: VendorConfig[] = [
       data: ArturosVendorData
    },
    {
-      name: "Aeonicus",
-      category: "Raid Finder Ensembles",
-      data: AeonicusVendorData
-   },
-   {
-      name: "Durus",
-      category: "Normal Raid Ensembles",
-      data: DurusVendorData
-   },
-   {
-      name: "Sacerdormu",
-      category: "Heroic Raid Ensembles",
-      data: SacerdormuVendorData
-   },
-   {
       name: "Pythagorus",
-      category: "Mythic Raid Ensembles",
+      category: "Raid Ensembles",
       data: PythagorusVendorData
    },
    {

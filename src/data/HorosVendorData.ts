@@ -149,223 +149,216 @@ export const HorosVendorData: VendorInfo[] = [
    },
    {
       id: 21,
-      itemName: "Tylarr Gronnden",
-      itemUrl: "https://www.wowhead.com/item=144394/tylarr-gronnden",
-      lemixOnly: true,
-      bronzeCost: 35000
-   },
-   {
-      id: 22,
       itemName: "Big Red Raygun",
       itemUrl: "https://www.wowhead.com/item=142265/big-red-raygun",
       lemixOnly: false,
       bronzeCost: 35000
    },
    {
-      id: 23,
+      id: 22,
       itemName: "Crate of Bobbers: Tugboat",
       itemUrl: "https://www.wowhead.com/item=142530/crate-of-bobbers-tugboat",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 24,
+      id: 23,
       itemName: "Crate of Bobbers: Cat Head",
       itemUrl: "https://www.wowhead.com/item=142529/crate-of-bobbers-cat-head",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 25,
+      id: 24,
       itemName: "Crate of Bobbers: Can of Worms",
       itemUrl: "https://www.wowhead.com/item=142528/crate-of-bobbers-can-of-worms",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 26,
+      id: 25,
       itemName: "Crate of Bobbers: Wooden Pepe",
       itemUrl: "https://www.wowhead.com/item=143662/crate-of-bobbers-wooden-pepe",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 27,
+      id: 26,
       itemName: "Golden Hearthstone Card: Lord Jaraxxus",
       itemUrl: "https://www.wowhead.com/item=119211/golden-hearthstone-card-lord-jaraxxus",
       lemixOnly: false,
       bronzeCost: 100000
    },
    {
-      id: 28,
+      id: 27,
       itemName: "Scraps",
       itemUrl: "https://www.wowhead.com/item=146953/scraps",
       lemixOnly: false,
       bronzeCost: 80000
    },
    {
-      id: 29,
+      id: 28,
       itemName: "Orphaned Felbat",
       itemUrl: "https://www.wowhead.com/item=147841/orphaned-felbat",
       lemixOnly: false,
       bronzeCost: 35000
    },
    {
-      id: 30,
+      id: 29,
       itemName: "Ageless Bronze Drake",
       itemUrl: "https://www.wowhead.com/item=151828/ageless-bronze-drake",
       lemixOnly: false,
       bronzeCost: 80000
    },
    {
-      id: 31,
+      id: 30,
       itemName: "Bronze Proto-Whelp",
       itemUrl: "https://www.wowhead.com/item=151829/bronze-proto-whelp",
       lemixOnly: false,
       bronzeCost: 80000
    },
    {
-      id: 32,
+      id: 31,
       itemName: "Sira's Extra Cloak",
       itemUrl: "https://www.wowhead.com/item=147843/siras-extra-cloak",
       lemixOnly: false,
       bronzeCost: 35000
    },
    {
-      id: 33,
+      id: 32,
       itemName: "Pilfered Sweeper",
       itemUrl: "https://www.wowhead.com/item=147867/pilfered-sweeper",
       lemixOnly: false,
       bronzeCost: 35000
    },
    {
-      id: 34,
+      id: 33,
       itemName: "Uuna's Doll",
       itemUrl: "https://www.wowhead.com/item=153195/uunas-doll",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 35,
+      id: 34,
       itemName: "Fel-Afflicted Skyfin",
       itemUrl: "https://www.wowhead.com/item=153055/fel-afflicted-skyfin",
       lemixOnly: false,
       bronzeCost: 20000
    },
    {
-      id: 36,
+      id: 35,
       itemName: "Docile Skyfin",
       itemUrl: "https://www.wowhead.com/item=153054/docile-skyfin",
       lemixOnly: false,
       bronzeCost: 20000
    },
    {
-      id: 37,
+      id: 36,
       itemName: "Cross Gazer",
       itemUrl: "https://www.wowhead.com/item=153026/cross-gazer",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 38,
+      id: 37,
       itemName: "Grasping Manifestation",
       itemUrl: "https://www.wowhead.com/item=153056/grasping-manifestation",
       lemixOnly: false,
       bronzeCost: 20000
    },
    {
-      id: 39,
+      id: 38,
       itemName: "All-Seer's Eye",
       itemUrl: "https://www.wowhead.com/item=153204/all-seers-eye",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 40,
+      id: 39,
       itemName: "Baarut the Brisk",
       itemUrl: "https://www.wowhead.com/item=153193/baarut-the-brisk",
       lemixOnly: false,
       bronzeCost: 10000
    },
    {
-      id: 41,
+      id: 40,
       itemName: "Barrier Generator",
       itemUrl: "https://www.wowhead.com/item=153183/barrier-generator",
       lemixOnly: false,
       bronzeCost: 80000
    },
    {
-      id: 42,
+      id: 41,
       itemName: "Spire of Spite",
       itemUrl: "https://www.wowhead.com/item=153124/spire-of-spite",
       lemixOnly: false,
       bronzeCost: 35000
    },
    {
-      id: 43,
+      id: 42,
       itemName: "Sightless Eye",
       itemUrl: "https://www.wowhead.com/item=153293/sightless-eye",
       lemixOnly: false,
       bronzeCost: 25000
    },
    {
-      id: 44,
+      id: 43,
       itemName: "Blue Conservatory Scroll",
       itemUrl: "https://www.wowhead.com/item=153179/blue-conservatory-scroll",
       lemixOnly: false,
       bronzeCost: 25000
    },
    {
-      id: 45,
+      id: 44,
       itemName: "Red Conservatory Scroll",
       itemUrl: "https://www.wowhead.com/item=153181/red-conservatory-scroll",
       lemixOnly: false,
       bronzeCost: 25000
    },
    {
-      id: 46,
+      id: 45,
       itemName: "Yellow Conservatory Scroll",
       itemUrl: "https://www.wowhead.com/item=153180/yellow-conservatory-scroll",
       lemixOnly: false,
       bronzeCost: 25000
    },
    {
-      id: 47,
+      id: 46,
       itemName: "S.F.E Interceptor",
       itemUrl: "https://www.wowhead.com/item=153253/s-f-e-interceptor",
       lemixOnly: false,
       bronzeCost: 25000
    },
    {
-      id: 48,
+      id: 47,
       itemName: "Holy Lightsphere",
       itemUrl: "https://www.wowhead.com/item=153182/holy-lightsphere",
       lemixOnly: false,
       bronzeCost: 25000
    },
    {
-      id: 49,
+      id: 48,
       itemName: "Micro-Artillery Controller",
       itemUrl: "https://www.wowhead.com/item=153126/micro-artillery-controller",
       lemixOnly: false,
       bronzeCost: 25000
    },
    {
-      id: 50,
+      id: 49,
       itemName: "Vixx's Chest of Tricks",
       itemUrl: "https://www.wowhead.com/item=152982/vixxs-chest-of-tricks",
       lemixOnly: false,
       bronzeCost: 80000
    },
    {
-      id: 51,
+      id: 50,
       itemName: "Unstable Portal Emitter",
       itemUrl: "https://www.wowhead.com/item=153004/unstable-portal-emitter",
       lemixOnly: false,
       bronzeCost: 100000
    },
    {
-      id: 52,
+      id: 51,
       itemName: "Legion Communication Orb",
       itemUrl: "https://www.wowhead.com/item=153194/legion-communication-orb",
       lemixOnly: false,
