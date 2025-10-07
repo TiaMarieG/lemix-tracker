@@ -106,7 +106,6 @@ const VendorInfo = ({
       }
    }, [showConfetti]);
 
-
    return (
       <>
          {showConfetti &&

@@ -14,6 +14,8 @@ export default function CollectionProvider({ children }) {
       }
    });
 
+   const [showLemixOnly, setShowLemixOnly] = useState(false);
+
    useEffect(() => {
       localStorage.setItem('collectedItems', JSON.stringify(collectedItems));
    }, [collectedItems]);
@@ -27,11 +29,12 @@ export default function CollectionProvider({ children }) {
       return vendors.flatMap(vendor =>
          vendor.data
             .filter(item => item != null)
+            .filter(item => !showLemixOnly || item.lemixOnly)
             .map(item => ({ ...item, vendorName: vendor.name }))
       );
-   }, []);
+   }, [showLemixOnly]);
    
-   const value = { collectedItems, handleItemToggle, allVendorData, vendors };
+   const value = { collectedItems, handleItemToggle, allVendorData, vendors, showLemixOnly, setShowLemixOnly };
 
    return (
       <CollectionContext.Provider value={value}>

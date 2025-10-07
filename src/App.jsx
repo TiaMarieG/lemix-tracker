@@ -9,7 +9,8 @@ import Box from "@mui/material/Box";
 import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
-   const { vendors } = useCollection();
+   
+   const { vendors, showLemixOnly } = useCollection();
    const [isToggled, setIsToggled] = useState(false);
    const [hideCollected, setHideCollected] = useState(false);
    const [showBronzeCost, setShowBronzeCost] = useState(false);
@@ -68,25 +69,34 @@ const App = () => {
                      justifyContent: "space-between",
                   }}
                >
-                  {sortedVendors.map((vendor) => (
-                     <Box
-                        key={vendor.name}
-                        sx={{
-                           width: { xs: "100%", md: "49%" },
-                           mb: 2,
-                        }}
-                     >
-                        <VendorInfo
-                           vendorName={vendor.name}
-                           vendorCategory={vendor.category}
-                           vendorData={vendor.data.filter(
-                              (item) => item != null
-                           )}
-                           hideCollected={hideCollected}
-                           showBronzeCost={showBronzeCost}
-                        />
-                     </Box>
-                  ))}
+                  {sortedVendors.map((vendor) => {
+                     const filteredData = vendor.data.filter((item) => {
+                        if (item === null) return false;
+                        return !showLemixOnly || item.lemixOnly;
+                     });
+                     
+                     if (filteredData.length === 0) {
+                        return null;
+                     }
+
+                     return (
+                        <Box
+                           key={vendor.name}
+                           sx={{
+                              width: { xs: "100%", md: "49%" },
+                              mb: 2,
+                           }}
+                        >
+                           <VendorInfo
+                              vendorName={vendor.name}
+                              vendorCategory={vendor.category}
+                              vendorData={filteredData}
+                              hideCollected={hideCollected}
+                              showBronzeCost={showBronzeCost}
+                           />
+                        </Box>
+                     );
+                  })}
                </Box>
             </Box>
          </Box>
